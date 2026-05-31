@@ -13,7 +13,24 @@
  * Les modifications apportées à ce fichier doivent être partagées sous la même Licence Publique Mozilla, v. 2.0.
  **/
 
-using System.Runtime.InteropServices;
+using System.Collections.ObjectModel;
 
-[assembly: ComVisible(false)]
-[assembly: Guid("22205859-71C5-4675-BB4E-CD84E0941BE9")]
+namespace GalacticShrine.Configuration.Validation.GsC {
+
+  public class ResultatValidationGsC {
+
+    public Collection<ErreurValidationGsC> Erreurs { get; } = [];
+
+    public bool EstValide => Erreurs.Count == 0;
+
+    public ErreurValidationGsC PremiereErreur => Erreurs.Count > 0 ? Erreurs[0] : null;
+
+    public void AjouterErreur(ErreurValidationGsC Erreur) {
+
+      if(Erreur != null) {
+
+        Erreurs.Add(item: Erreur);
+      }
+    }
+  }
+}

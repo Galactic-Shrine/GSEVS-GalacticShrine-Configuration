@@ -127,7 +127,7 @@
     <value>ไม่สามารถแยกวิเคราะห์ข้อความ: '{ 0 }' โปรดดูตัวเลือกการกำหนดค่า {1} {2} เพื่อเพิกเฉยต่อข้อผิดพลาดนี้!</value>
   </data>
   <data name="MessageExceptionDuplicationDeLaCle" xml:space="preserve">
-    <value>พบการทำซ้ำของคีย์ '{ 0 }' ในส่วน '{ 1}!</value>
+    <value>พบการทำซ้ำของคีย์ '{0}' ในส่วน '{1}!</value>
   </data>
   <data name="MessageExceptionErreurProprietesHorsSection" xml:space="preserve">
     <value>คุณสมบัติต้องมีอยู่ในส่วนโปรดตรวจสอบตัวเลือกการกำหนดค่า {0} {1} เพื่อเพิกเฉยต่อข้อผิดพลาดนี้!</value>

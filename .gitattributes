@@ -1,0 +1,55 @@
+# Galactic-Shrine / GSEVS - Configuration
+# Normalisation des fins de ligne pour éviter les gros diffs inutiles.
+# Le code C# reste en CRLF sous Windows, les scripts Unix restent en LF.
+
+# Par défaut, Git détecte les fichiers texte et normalise en LF dans le dépôt.
+* text=auto
+
+# Code .NET / C# - conserver CRLF dans le dossier de travail Windows.
+*.cs     text eol=crlf
+*.csproj text eol=crlf
+*.sln    text eol=crlf
+*.props  text eol=crlf
+*.targets text eol=crlf
+
+# Fichiers Galactic-Shrine Configuration.
+*.GsC  text eol=crlf
+*.GsCc binary
+
+# Configurations / documentation.
+*.md     text eol=lf
+*.txt    text eol=crlf
+*.json   text eol=lf
+*.xml    text eol=crlf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+*.editorconfig text eol=crlf
+.gitattributes text eol=lf
+.gitignore     text eol=lf
+
+# Scripts Windows.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Scripts Unix / macOS / Linux.
+*.sh text eol=lf
+
+# Registres Windows.
+*.reg text eol=crlf
+
+# Fichiers binaires.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.bmp  binary
+*.webp binary
+*.zip  binary
+*.7z   binary
+*.rar  binary
+*.dll  binary
+*.exe  binary
+*.pdb  binary
+*.snk  binary

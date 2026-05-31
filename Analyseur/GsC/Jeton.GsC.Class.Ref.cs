@@ -13,7 +13,32 @@
  * Les modifications apportées à ce fichier doivent être partagées sous la même Licence Publique Mozilla, v. 2.0.
  **/
 
-using System.Runtime.InteropServices;
+using GalacticShrine.Enumeration.Configuration.GsC;
 
-[assembly: ComVisible(false)]
-[assembly: Guid("22205859-71C5-4675-BB4E-CD84E0941BE9")]
+namespace GalacticShrine.Configuration.Analyseur.GsC {
+
+  /**
+   * <summary>
+   *   [FR] Représente un jeton produit par le lexeur GsC.<br/>
+   *   [EN] Represents a token produced by the GsC lexer.
+   * </summary>
+   **/
+  public class JetonGsC {
+
+    public TypeJetonGsC Type { get; }
+
+    public string Texte { get; }
+
+    public int Ligne { get; }
+
+    public int Colonne { get; }
+
+    public JetonGsC(TypeJetonGsC Type, string Texte, int Ligne, int Colonne) {
+
+      this.Type = Type;
+      this.Texte = Texte;
+      this.Ligne = Ligne;
+      this.Colonne = Colonne;
+    }
+  }
+}

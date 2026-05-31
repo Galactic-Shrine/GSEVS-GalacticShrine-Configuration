@@ -1,6 +1,16 @@
-﻿/**
- * Copyright © 2017-2023, Galactic-Shrine - All Rights Reserved.
- * Copyright © 2017-2023, Galactic-Shrine - Tous droits réservés.
+/**
+ * Copyright © 2017-2026, Galactic-Shrine - All Rights Reserved.
+ * Copyright © 2017-2026, Galactic-Shrine - Tous droits réservés.
+ * 
+ * Mozilla Public License 2.0 / Licence Publique Mozilla 2.0
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ * Modifications to this file must be shared under the same Mozilla Public License, v. 2.0.
+ *
+ * Cette Forme de Code Source est soumise aux termes de la Licence Publique Mozilla, version 2.0.
+ * Si une copie de la MPL ne vous a pas été distribuée avec ce fichier, vous pouvez en obtenir une à l'adresse suivante : https://mozilla.org/MPL/2.0/.
+ * Les modifications apportées à ce fichier doivent être partagées sous la même Licence Publique Mozilla, v. 2.0.
  **/
 
 using System.Collections;
@@ -171,12 +181,12 @@ namespace GalacticShrine.Modele.Configuration.Ini {
      *   [EN] Adds a new property to the collection with the specified key and value.
      * </summary>
      * <param name="Cle">
-     *   [FR] clé de la nouvelle propriété à ajouter.<br/>
-     *   [EN] key of the new property to be added.
+     *   [FR] Clé de la nouvelle propriété à ajouter.<br/>
+     *   [EN] Key of the new property to add.
      * </param>
      * <param name="Valeur">
-     *   [FR] clé de la nouvelle propriété à ajouter.<br/>
-     *   [EN] key of the new property to be added.
+     *   [FR] Valeur de la nouvelle propriété à ajouter.<br/>
+     *   [EN] Value of the new property to add.
      * </param>
      * <returns>
      *   [FR] Vrai (true) si la propriété a été ajoutée, false si une clé portant le même nom existe déjà dans la collection.<br/>
@@ -262,26 +272,23 @@ namespace GalacticShrine.Modele.Configuration.Ini {
       }
     }*/
 
-    /**
-   * <summary>
-   *   [FR] Fonction de suppression.<br/>
-   *   [EN] Deletion function.
-   * </summary>
-   * <remarks>
-   *   [FR] Utiliser par défaut: <see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/>.<br/>
-   *   [EN] Use by default: <see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/>.
-   * </remarks>
-   * <param name="Effacement">
-   *   [FR] Permet de passer au type de suppression souhaité.<br/>
-   *   [EN] Switches to the desired type of deletion.
-   * </param>
-   * <value>
-   *   [FR] <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/>: Efface toutes les propriétés de cette collection.</para>
-   *        <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Commentaires"/>: Efface tous les commentaires de cette section.</para>
-   *   [EN] <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/>: Deletes all properties in this collection.</para>
-   *        <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Commentaires"/>: Deletes all comments in this section.</para>
-   * </value>
-   **/
+        /**
+     * <summary>
+     *   [FR] Efface les commentaires ou les propriétés de cette collection selon le mode demandé.<br/>
+     *   [EN] Clears comments or properties from this collection according to the requested mode.
+     * </summary>
+     * <remarks>
+     *   [FR] <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Commentaires"/> efface les commentaires de chaque propriété.</para>
+     *        <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/> supprime toutes les propriétés de la collection.</para>
+     *   [EN] <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Commentaires"/> clears comments from each property.</para>
+     *        <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/> removes all properties from the collection.</para>
+     * </remarks>
+     * <param name="Effacement">
+     *   [FR] Mode d'effacement à appliquer. La valeur par défaut est <see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/>.<br/>
+     *   [EN] Clearing mode to apply. The default value is <see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/>.
+     * </param>
+     **/
+
     public void Effacer(Effacement Effacement = Effacement.Proprietes) {
 
       switch(Effacement) {
@@ -326,8 +333,8 @@ namespace GalacticShrine.Modele.Configuration.Ini {
      *   [EN] The key to search.
      * </param>
      * <returns>
-     *   [FR] Vrai(true) si un bien avec le nom donné existe dans la collection, sinon faux(false).<br/>
-     *   [EN] True if a good with the given name exists in the collection, otherwise false.
+     *   [FR] Vrai (true) si une propriété avec le nom donné existe dans la collection, sinon faux (false).<br/>
+     *   [EN] True if a property with the given name exists in the collection, otherwise false.
      * </returns>
      **/
     public bool Contient(string NomDeLaCle) => Proprietes.ContainsKey(key: NomDeLaCle);
@@ -339,7 +346,7 @@ namespace GalacticShrine.Modele.Configuration.Ini {
      * </summary>
      * <param name="NomDeLaCle">
      *   [FR] Nom de la clé à récupérer.<br/>
-     *   [EN] Nom of the key to be recovered.
+     *   [EN] Name of the key to retrieve.
      * </param>
      * <returns>
      *   [FR] Une instance <see cref="GalacticShrine.Modele.Configuration.Ini.Propriete"/> contenant les informations relatives à la clé ou <c>null</c> si la clé n'a pas été trouvée.<br/>

@@ -13,7 +13,29 @@
  * Les modifications apportées à ce fichier doivent être partagées sous la même Licence Publique Mozilla, v. 2.0.
  **/
 
-using System.Runtime.InteropServices;
+using GalacticShrine.Enumeration.Configuration.GsC;
 
-[assembly: ComVisible(false)]
-[assembly: Guid("22205859-71C5-4675-BB4E-CD84E0941BE9")]
+namespace GalacticShrine.Configuration.Validation.GsC {
+
+  public class ErreurValidationGsC {
+
+    public string Code { get; }
+
+    public string Chemin { get; }
+
+    public string Message { get; }
+
+    public TypeValeurGsC? TypeAttendu { get; }
+
+    public TypeValeurGsC? TypeActuel { get; }
+
+    public ErreurValidationGsC(string Code, string Chemin, string Message, TypeValeurGsC? TypeAttendu = null, TypeValeurGsC? TypeActuel = null) {
+
+      this.Code = Code;
+      this.Chemin = Chemin;
+      this.Message = Message;
+      this.TypeAttendu = TypeAttendu;
+      this.TypeActuel = TypeActuel;
+    }
+  }
+}

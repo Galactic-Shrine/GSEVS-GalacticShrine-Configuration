@@ -127,7 +127,7 @@
     <value>Չհաջողվեց վերլուծել տեքստը ՝ «{ 0 }»։ Այս սխալն անտեսելու համար տե ՛ ս կոնֆիգուրացիայի {1} տարբերակը ։{2}</value>
   </data>
   <data name="MessageExceptionDuplicationDeLaCle" xml:space="preserve">
-    <value>«{ 0 }» ստեղնի կրկնօրինակում, որը գտնվում է «{ 1 }» բաժնում:</value>
+    <value>«{0}» ստեղնի կրկնօրինակում, որը գտնվում է «{1}» բաժնում:</value>
   </data>
   <data name="MessageExceptionErreurProprietesHorsSection" xml:space="preserve">
     <value>Սեփականությունները պետք է պարունակվեն բաժնում ։ Այս սխալն անտեսելու համար ստուգեք կոնֆիգուրացիայի {0} տարբերակը:{1}</value>

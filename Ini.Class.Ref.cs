@@ -1,6 +1,16 @@
-﻿/**
- * Copyright © 2017-2023, Galactic-Shrine - All Rights Reserved.
- * Copyright © 2017-2023, Galactic-Shrine - Tous droits réservés.
+/**
+ * Copyright © 2017-2026, Galactic-Shrine - All Rights Reserved.
+ * Copyright © 2017-2026, Galactic-Shrine - Tous droits réservés.
+ * 
+ * Mozilla Public License 2.0 / Licence Publique Mozilla 2.0
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ * Modifications to this file must be shared under the same Mozilla Public License, v. 2.0.
+ *
+ * Cette Forme de Code Source est soumise aux termes de la Licence Publique Mozilla, version 2.0.
+ * Si une copie de la MPL ne vous a pas été distribuée avec ce fichier, vous pouvez en obtenir une à l'adresse suivante : https://mozilla.org/MPL/2.0/.
+ * Les modifications apportées à ce fichier doivent être partagées sous la même Licence Publique Mozilla, v. 2.0.
  **/
 
 using System;
@@ -10,7 +20,7 @@ using System.IO;
 using GalacticShrine.Configuration.Analyseur;
 using GalacticShrine.Configuration.Configuration;
 using GalacticShrine.Enumeration.Configuration;
-using GalacticShrine.Exception.Configuration;
+using GalacticShrine.Exceptions.Configuration;
 using GalacticShrine.Configuration.Properties;
 using GalacticShrine.Modele.Configuration.Ini;
 using static GalacticShrine.Configuration.Analyseur.TamponDeChaine;
@@ -26,7 +36,25 @@ namespace GalacticShrine.Configuration {
     *   [EN] Schema that defines the structure of the ini file to be analyzed.
     * </summary>
     **/
-    public SchemaIni Schema { get; protected set; }
+    private SchemaIni SchemaInstance;
+
+    public SchemaIni Schema {
+
+      get {
+
+        if(SchemaInstance == null) {
+
+          SchemaInstance = new SchemaIni();
+        }
+
+        return SchemaInstance;
+      }
+
+      protected set {
+
+        SchemaInstance = value.CloneEnProfondeur();
+      }
+    }
 
     public virtual AnalyseurIni Configuration { get; protected set; }
 
@@ -568,7 +596,7 @@ namespace GalacticShrine.Configuration {
      * <param name="NomDeLaSection">
      *   [FR] Nom de la section où se trouve la <see cref="GalacticShrine.Modele.Configuration.Ini.ProprieteCollection"/>.<br/>
      *        Utilisé uniquement à des fins de journalisation.<br/>
-     *   [EN] Nom of the section where the <see cref="GalacticShrine.Modele.Configuration.Ini.ProprieteCollection"/> is located.<br/>
+     *   [EN] Name of the section where the <see cref="GalacticShrine.Modele.Configuration.Ini.ProprieteCollection"/> is located.<br/>
      *        Used for logging purposes only.
      * </param>
      **/

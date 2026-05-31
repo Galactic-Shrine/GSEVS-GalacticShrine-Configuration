@@ -127,7 +127,7 @@
     <value>Cha ghabh teacsa a pharsadh: '{ 0 }'. Thoir sùil air an roghainn rèiteachaidh {1}.{2} gus dearmad a dhèanamh air a 'mhearachd seo.!</value>
   </data>
   <data name="MessageExceptionDuplicationDeLaCle" xml:space="preserve">
-    <value>Dùblachadh na h - iuchrach '{ 0 }' a lorgar ann an earrann '{ 1}'!</value>
+    <value>Dùblachadh na h - iuchrach '{0}' a lorgar ann an earrann '{1}'!</value>
   </data>
   <data name="MessageExceptionErreurProprietesHorsSection" xml:space="preserve">
     <value>Bu chòir na h - earrannan a bhith air an roinn ann an grunn roinnean. Thoir sùil air an roghainn rèiteachaidh {0}.{1} gus dearmad a dhèanamh air a 'mhearachd seo.!</value>

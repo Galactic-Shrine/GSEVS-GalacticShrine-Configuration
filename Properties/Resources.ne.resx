@@ -127,7 +127,7 @@
     <value>पाठ पद वर्णन गर्न असक्षम: '{ 0 }'. कृपया कन्फिगरेसन विकल्प {1} हेर्नुहोस् ।{2} यस त्रुटिलाई बेवास्ता गर्न ।!</value>
   </data>
   <data name="MessageExceptionDuplicationDeLaCle" xml:space="preserve">
-    <value>'{ 0 }' खण्ड '{ 1} मा फेला परेको कुञ्जी '{ 0 }' को नक्कल!</value>
+    <value>'{0}' खण्ड '{1} मा फेला परेको कुञ्जी '{0}' को नक्कल!</value>
   </data>
   <data name="MessageExceptionErreurProprietesHorsSection" xml:space="preserve">
     <value>गुणहरू एक खण्डमा समावेश हुनुपर्दछ । कृपया कन्फिगरेसन विकल्प {0} जाँच गर्नुहोस् ।{1} यो त्रुटि बेवास्ता गर्न ।!</value>

@@ -1,6 +1,16 @@
-﻿/**
- * Copyright © 2017-2023, Galactic-Shrine - All Rights Reserved.
- * Copyright © 2017-2023, Galactic-Shrine - Tous droits réservés.
+/**
+ * Copyright © 2017-2026, Galactic-Shrine - All Rights Reserved.
+ * Copyright © 2017-2026, Galactic-Shrine - Tous droits réservés.
+ * 
+ * Mozilla Public License 2.0 / Licence Publique Mozilla 2.0
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ * Modifications to this file must be shared under the same Mozilla Public License, v. 2.0.
+ *
+ * Cette Forme de Code Source est soumise aux termes de la Licence Publique Mozilla, version 2.0.
+ * Si une copie de la MPL ne vous a pas été distribuée avec ce fichier, vous pouvez en obtenir une à l'adresse suivante : https://mozilla.org/MPL/2.0/.
+ * Les modifications apportées à ce fichier doivent être partagées sous la même Licence Publique Mozilla, v. 2.0.
  **/
 
 using System;
@@ -19,7 +29,13 @@ namespace GalacticShrine.Modele.Configuration.Ini {
    **/
   public class Section : ClonableInterface<Section> {
 
-    private string Noms;
+		/**
+     * <summary>
+     *   [FR] Le nom de la section.<br/>
+     *   [EN] The section name.
+     * </summary>
+     **/
+		private string Noms;
 
     /**
      * <summary>
@@ -29,7 +45,13 @@ namespace GalacticShrine.Modele.Configuration.Ini {
      **/
     private List<string> Commentaires;
 
-    private readonly IEqualityComparer<string> RechercherComparer;
+		/**
+     * <summary>
+     *   [FR] Comparateur d'égalité pour la recherche de propriétés dans cette section.<br/>
+     *   [EN] Equality comparer for searching properties in this section.
+     * </summary>
+     **/
+		private readonly IEqualityComparer<string> RechercherComparer;
 
     /**
      * <summary>
@@ -143,28 +165,25 @@ namespace GalacticShrine.Modele.Configuration.Ini {
       this.RechercherComparer = RechercherComparer;
     }
 
-    /**
+        /**
      * <summary>
-     *   [FR] Fonction de suppression.<br/>
-     *   [EN] Deletion function.
+     *   [FR] Efface les commentaires et/ou les propriétés de cette section INI selon le mode demandé.<br/>
+     *   [EN] Clears comments and/or properties from this INI section according to the requested mode.
      * </summary>
-     * <param name="Effacement">
-     *   [FR] Permet de passer au type de suppression souhaité.<br/>
-     *   [EN] Switches to the desired type of deletion.
-     * </param>
      * <remarks>
-     *   [FR] Utiliser par défaut: <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Tout"/></para>
-     *   [EN] Use by default: <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Tout"/></para>
+     *   [FR] <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Commentaires"/> efface le commentaire de la section et les commentaires des propriétés.</para>
+     *        <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/> supprime les propriétés, mais conserve le commentaire de la section.</para>
+     *        <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Tout"/> supprime le commentaire de la section et les propriétés.</para>
+     *   [EN] <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Commentaires"/> clears the section comment and property comments.</para>
+     *        <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/> removes properties while keeping the section comment.</para>
+     *        <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Tout"/> removes the section comment and properties.</para>
      * </remarks>
-     * <value>
-     *   [FR] <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/>: Efface toutes les paires de propriétés de cette section.</para>
-     *        <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Commentaires"/>: Efface tous les commentaires de cette section et de toutes les paires de propriétés qu'elle contient.</para>
-     *        <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Tout"/>: Efface tous les commentaires et toutes les propriétés de cette section.</para>
-     *   [EN] <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/>: Deletes all property pairs in this section.</para>
-     *        <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Commentaires"/>: Deletes all comments from this section and all property pairs it contains.</para>
-     *        <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Tout"/>: Deletes all comments and properties from this Section.</para>
-     * </value>
+     * <param name="Effacement">
+     *   [FR] Mode d'effacement à appliquer. La valeur par défaut est <see cref="GalacticShrine.Enumeration.Configuration.Effacement.Tout"/>.<br/>
+     *   [EN] Clearing mode to apply. The default value is <see cref="GalacticShrine.Enumeration.Configuration.Effacement.Tout"/>.
+     * </param>
      **/
+
     public void Effacer(Effacement Effacement = Effacement.Tout) {
 
       switch (Effacement) {

@@ -127,7 +127,7 @@
     <value>Текстът не може да бъде обработен: '{ 0 }'. Моля, вижте опцията за конфигурация {1 }.{ 2}, за да игнорирате тази грешка.!</value>
   </data>
   <data name="MessageExceptionDuplicationDeLaCle" xml:space="preserve">
-    <value>Дублиране на ключ '{ 0 }', намерен в раздел '{ 1}!</value>
+    <value>Дублиране на ключ '{0}', намерен в раздел '{1}!</value>
   </data>
   <data name="MessageExceptionErreurProprietesHorsSection" xml:space="preserve">
     <value>Свойствата трябва да се съдържат в раздел. Моля, проверете опцията за конфигурация {0 }.{ 1}, за да игнорирате тази грешка.!</value>

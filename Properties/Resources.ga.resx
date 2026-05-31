@@ -127,7 +127,7 @@
     <value>Ní féidir téacs a pharsáil: '{ 0 }'. Féach ar an rogha cumraíochta {1}.{2} chun neamhaird a dhéanamh den earráid seo.!</value>
   </data>
   <data name="MessageExceptionDuplicationDeLaCle" xml:space="preserve">
-    <value>Dúbláil na heochrach '{ 0 }' le fáil in alt '{ 1}!</value>
+    <value>Dúbláil na heochrach '{0}' le fáil in alt '{1}!</value>
   </data>
   <data name="MessageExceptionErreurProprietesHorsSection" xml:space="preserve">
     <value>Ní mór réadmhaoine a bheith i rannóg. Seiceáil an rogha cumraíochta {0}.{1} chun neamhaird a dhéanamh den earráid seo.!</value>

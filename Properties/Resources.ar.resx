@@ -127,7 +127,7 @@
     <value>تعذر تحليل النص: '{ 0 }'. يرجى الرجوع إلى خيار التكوين {1}.{2} لتجاهل هذا الخطأ.!</value>
   </data>
   <data name="MessageExceptionDuplicationDeLaCle" xml:space="preserve">
-    <value>تم العثور على تكرار للمفتاح '{ 0 }' في القسم '{ 1}!</value>
+    <value>تم العثور على تكرار للمفتاح '{0}' في القسم '{1}'</value>
   </data>
   <data name="MessageExceptionErreurProprietesHorsSection" xml:space="preserve">
     <value>يجب تضمين الخصائص في قسم. يرجى التحقق من خيار التكوين {0}.{1} لتجاهل هذا الخطأ.!</value>

@@ -1,6 +1,16 @@
-﻿/**
- * Copyright © 2017-2023, Galactic-Shrine - All Rights Reserved.
- * Copyright © 2017-2023, Galactic-Shrine - Tous droits réservés.
+/**
+ * Copyright © 2017-2026, Galactic-Shrine - All Rights Reserved.
+ * Copyright © 2017-2026, Galactic-Shrine - Tous droits réservés.
+ * 
+ * Mozilla Public License 2.0 / Licence Publique Mozilla 2.0
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ * Modifications to this file must be shared under the same Mozilla Public License, v. 2.0.
+ *
+ * Cette Forme de Code Source est soumise aux termes de la Licence Publique Mozilla, version 2.0.
+ * Si une copie de la MPL ne vous a pas été distribuée avec ce fichier, vous pouvez en obtenir une à l'adresse suivante : https://mozilla.org/MPL/2.0/.
+ * Les modifications apportées à ce fichier doivent être partagées sous la même Licence Publique Mozilla, v. 2.0.
  **/
 
 using GalacticShrine.Configuration.Configuration;
@@ -175,26 +185,23 @@ namespace GalacticShrine.Configuration {
       Configuration  = DonneesIniInstance.Configuration.CloneEnProfondeur();
     }
 
-    /**
+        /**
      * <summary>
-     *   [FR] Fonction de suppression.<br/>
-     *   [EN] Deletion function.
+     *   [FR] Efface les commentaires, les propriétés globales et/ou les sections de ces données INI selon le mode demandé.<br/>
+     *   [EN] Clears comments, global properties and/or sections from these INI data according to the requested mode.
      * </summary>
      * <remarks>
-     *   [FR] Utiliser par défaut: <see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/>.<br/>
-     *   [EN] Use by default: <see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/>.
+     *   [FR] <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Commentaires"/> efface les commentaires des propriétés globales et des sections, sans supprimer les données.</para>
+     *        <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/> supprime les propriétés globales et toutes les sections.</para>
+     *   [EN] <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Commentaires"/> clears comments from global properties and sections without removing data.</para>
+     *        <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/> removes global properties and all sections.</para>
      * </remarks>
      * <param name="Effacement">
-     *   [FR] Permet de passer au type de suppression souhaité.<br/>
-     *   [EN] Switches to the desired type of deletion.
+     *   [FR] Mode d'effacement à appliquer. La valeur par défaut est <see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/>.<br/>
+     *   [EN] Clearing mode to apply. The default value is <see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/>.
      * </param>
-     * <value>
-     *   [FR] <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/>: Supprime toutes les données.</para>
-     *        <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Commentaires"/>: Supprime tous les commentaires dans toutes les sections et valeurs de propriétés.</para>
-     *   [EN] <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Proprietes"/>: Deletes all data.</para>
-     *        <para><see cref="GalacticShrine.Enumeration.Configuration.Effacement.Commentaires"/>: Deletes all comments in all sections and properties values.</para>
-     * </value>
      **/
+
     public void Effacer(Effacement Effacement = Effacement.Proprietes) {
 
       switch(Effacement) {
