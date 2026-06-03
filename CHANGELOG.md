@@ -7,6 +7,39 @@ Ce projet utilise une logique de versionnement alignée sur les versions d'assem
 
 ---
 
+## [1.2.0.117] - 2026-06-03
+
+### Ajouté
+
+- Ajout de `OptionsDepuisGsC` pour configurer les options `GsId` depuis un fichier `.GsC` ou `.GsCc`.
+- Ajout de la prise en charge de la section de configuration `<{GsId}>`.
+- Ajout de la lecture de la propriété `Casse`.
+- Ajout de la lecture de l'objet `Format` avec les valeurs :
+  - `Texte`;
+  - `Json`;
+  - `BaseDeDonnees`.
+- Ajout de la lecture de la propriété `Verrouiller`.
+- Ajout d'une surcharge permettant de configurer `GsId` depuis une instance `GsC` déjà configurée, notamment pour les fichiers `.GsCc` nécessitant un mot de passe.
+
+### Exemple de configuration
+
+```gsc
+<{GsId}>
+Casse ~> "Majuscules";
+Format ~> <
+  Texte ~> "D";
+  Json ~> "D";
+  BaseDeDonnees ~> "N";
+>;
+Verrouiller ~> true;
+```
+
+### Notes
+
+- Cette version ajoute l'intégration entre `GsId` et le format `GsC`.
+- Le système `GsId` reste dans le dépôt principal `GSEVS-GalacticShrine`.
+- L'adaptateur `OptionsDepuisGsC` est placé dans `GSEVS-GalacticShrine-Configuration`, car il dépend du format `GsC`.
+
 ## [1.1.0.112] - 2026-05-31
 
 ### Résumé
